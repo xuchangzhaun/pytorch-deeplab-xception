@@ -25,8 +25,8 @@ def calculate_weigths_labels(dataset, dataloader, num_classes):
     ret = np.array(class_weights)
            
     classes_weights_directory = 'class_weight'
-    if not os.path.exists(classes_weights_path):
-        os.makedirs(classes_weights_path)
+    if not os.path.exists(classes_weights_directory):
+        os.makedirs(classes_weights_directory)
     classes_weights_path=os.path.join(classes_weights_directory,dataset+'_classes_weights.npy')
     np.save(classes_weights_path, ret)
 
